@@ -2,7 +2,7 @@
 
 ## Setup
 1. Install Ruby
-2. Install Bundler (package manager for ruby) `gem install bundler` 
+2. Install Bundler (package manager for ruby) `gem install bundler`
 3. Install gems (ruby packages) using bundler `bundle install`
 4. Start server with `shotgun app.rb`. Your server will now be listening on `http://localhost:9393`
 
@@ -10,14 +10,17 @@
 
 This project uses [Sinatra](http://www.sinatrarb.com), a micro framework for Ruby.
 
-### Static files and assets 
+### Static files and assets
 
 Code that is in `public/` will automatically be served as static assets from the root path
 
 `public/example.html` will be served from `http://localhost:9393/example.html`
 
-`public/javascripts/app.js` will be served from `http://localhost:9393/javascripts/app.js`
+`public/js/app.js` will be served from `http://localhost:9393/js/app.js`
 
+### Debugging
+
+Insert `binding.pry` into your code and exection will stop here. You can then inspect the window running the server and interactively debug.
 
 ## Example Answers
 ### Example Questionnaire Answers #1
@@ -110,7 +113,7 @@ Code that is in `public/` will automatically be served as static assets from the
         {"id":"1", "value":"Articulations of the mandible"},
         {"id":"2", "value":"Articulations of the vertebral column with the cranium"},
         {"id":"3", "value":"Articulation of the atlas with the epistropheous or axis"},
-        {"id":"4", "value":"Costoverbral articulations"}
+        {"id":"4", "value":"Costovertebral articulations"}
       ]
     }
   ]
