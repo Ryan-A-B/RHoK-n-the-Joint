@@ -1,6 +1,12 @@
 # RHoK-n-the-Joint
 
+## Setup
+1. Install Ruby
+2. Install Bundler (package manager for ruby) `gem install bundler` 
+3. Install gems (ruby packages) using bundler `bundle install`
+4. Run Server `shotgun app.rb`
 
+## Example Answers
 ### Example Questionnaire Answers #1
 ```
 {
