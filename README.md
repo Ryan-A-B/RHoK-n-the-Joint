@@ -17,12 +17,22 @@ questions:[
   },
   {
     "id":"3",
+    "description":"Onset of symptoms",
+    "answers":["id":"1", "description":"< 1 month"]
+  },
+  {
+    "id":"4",
+    "description":"Regularity of symptoms",
+    "answers":["id":"1", "persistant"]
+  },
+  {
+    "id":"5",
     "description":"Morning pain or stiffness",
     "answers":[]
   },
   {
-    "id":"4",
-    "description":"Articulations of the wrist and hand",
+    "id":"6",
+    "description":"Articulations of the head, neck and cervical and thoracic spine",
     "answers":[]
   }
 ]
@@ -42,18 +52,27 @@ questions:[
   },
   {
     "id":"3",
+    "description":"Onset of symptoms",
+    "answers":["id":"3", "description":">3 months"]
+  },
+  {
+    "id":"4",
+    "description":"Regularity of symptoms",
+    "answers":["id":"1", "intermittent"]
+  },
+  {
+    "id":"5",
     "description":"Morning pain or stiffness",
     "answers":[{"id":"2", "value":"<30min"}]
   },
   {
-    "id":"4",
-    "description":"Articulations of the wrist and hand",
+    "id":"6",
+    "description":"Articulations of head, neck and cervical and thoracic spine",
     "answers":[
-      {"id":"1", "value":"Intercarpal articulations"},
-      {"id":"2", "value":"Carpometacarpal articulations"},
-      {"id":"3", "value":"Intermetacarpal articulations"},
-      {"id":"4", "value":"Metacarpophalangeal articulations"},
-      {"id":"5", "value":"Articulations of the digits"}
+      {"id":"1", "value":"Articulations of the mandible"},
+      {"id":"2", "value":"Articulations of the vertebral column with the cranium"},
+      {"id":"3", "value":"Articulation of the atlas with the epistropheous or axis"},
+      {"id":"4", "value":"Costoverbral articulations"}
     ]
   }
 ]
