@@ -10,13 +10,13 @@
 
 This project uses [Sinatra](http://www.sinatrarb.com), a micro framework for Ruby.
 
-### Static assets 
+### Static files and assets 
 
-Code that is in `./public` will automatically be served as static assets from the root path
+Code that is in `public/` will automatically be served as static assets from the root path
 
-`./public/example.html` will be served from `http://localhost:9393/example.html`
+`public/example.html` will be served from `http://localhost:9393/example.html`
 
-`./public/javascripts/app.js` will be served from `http://localhost:9393/javascripts/app.js`
+`public/javascripts/app.js` will be served from `http://localhost:9393/javascripts/app.js`
 
 
 ## Example Answers
