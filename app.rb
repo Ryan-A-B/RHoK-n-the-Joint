@@ -3,6 +3,8 @@ require 'sinatra'
 require 'json'
 require 'pry'
 
+require_relative 'lib/response'
+
 post '/answers' do
   response = Response.new(JSON.parse request.body.read)
 
