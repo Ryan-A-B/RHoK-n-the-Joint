@@ -4,9 +4,15 @@ require 'json'
 require 'pry'
 
 post '/answers' do
-  response = JSON.parse request.body.read
-  response.to_s
+  response = Response.new(JSON.parse request.body.read)
+
+  if response.check_answer("Sex", "male")
+    '{ "message":"mechanical" }'
+  else
+    '{ "message":"inflamatory" }'
+  end
 end
+
 
 ##### Example routes #####
 
