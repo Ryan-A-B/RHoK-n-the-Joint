@@ -1,29 +1,37 @@
 # RHoK-n-the-Joint
 
-## Example Responses
 
+### Example Questionnaire Answers #1
 ```
 {
   "questions":[
     {
       "id":"1",
       "description":"Age",
-      "answers":[{"id":null, "value":"27"}]
+      "answers":[
+        {"id":null, "value":"27"}
+      ]
     },
     {
       "id":"2",
       "description":"Sex",
-      "answers":[{"id":"1", "value":"female"}]
+      "answers":[
+        {"id":"1", "value":"female"}
+      ]
     },
     {
       "id":"3",
       "description":"Onset of symptoms",
-      "answers":[{"id":"1", "description":"< 1 month"}]
+      "answers":[
+        {"id":"1", "description":"< 1 month"}
+      ]
     },
     {
       "id":"4",
       "description":"Regularity of symptoms",
-      "answers":[{"id":"1", "description":"persistant"}]
+      "answers":[
+        {"id":"1", "description":"persistant"}
+      ]
     },
     {
       "id":"5",
@@ -39,6 +47,7 @@
 }
 ```
 
+### Example Questionnaire Answers #2
 ```
 {
   "questions":[
@@ -50,22 +59,30 @@
     {
       "id":"2",
       "description":"Sex",
-      "answers":[{"id":"2", "value":"male"}]
+      "answers":[
+        {"id":"2", "value":"male"}
+      ]
     },
     {
       "id":"3",
       "description":"Onset of symptoms",
-      "answers":[{"id":"3", "description":">3 months"}]
+      "answers":[
+        {"id":"3", "description":"> 3 months"}
+      ]
     },
     {
       "id":"4",
       "description":"Regularity of symptoms",
-      "answers":[{"id":"1", "description":"intermittent"}]
+      "answers":[
+        {"id":"1", "description":"intermittent"}
+      ]
     },
     {
       "id":"5",
       "description":"Morning pain or stiffness",
-      "answers":[{"id":"2", "value":"<30min"}]
+      "answers":[
+        {"id":"2", "value":"< 30mina"}
+      ]
     },
     {
       "id":"6",
