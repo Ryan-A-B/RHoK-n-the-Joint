@@ -1,0 +1,86 @@
+@font-face {
+    font-family: museo-sans;
+    src: url(/fonts/MuseoSans_300.otf);
+}
+
+body {
+    background-color: #333;
+
+    font-family: museo-sans;
+}
+
+a {
+    color: #f80;
+}
+
+a:hover {
+    color: #d60;
+}
+
+.btn {
+    padding: 6px 80px;
+}
+
+.btn.btn-block {
+    padding: 6px 12px;
+}
+
+.btn-default.active {
+    color: #fff;
+
+    background-color: #555;
+
+    border-color: #444;
+}
+
+.btn-default.active:hover {
+    background-color: #777;
+}
+
+.btn-primary.active {
+    color: #fff;
+
+    background-color: #f80;
+
+    border-color: #e70;
+}
+
+.btn-primary.active:hover {
+    background-color: #d60;
+}
+
+.navbar {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #666;
+
+    border-radius: 0px;
+
+    background-color: rgba(48, 48, 48, 0.8);
+}
+
+.navbar-nav > li > a {
+    margin-bottom: 3px;
+
+    color: #fff;
+
+    border-bottom-color: transparent;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+}
+
+.navbar-nav > li > a:focus,
+.navbar-nav > li > a:hover {
+    background: none;
+
+    border-bottom-color: #f80;
+}
+
+.navbar-toggle {
+    background-color: #f80;
+    border-color: #e70;
+}
+
+.navbar-toggle .icon-bar {
+    background-color: #fff;
+}
