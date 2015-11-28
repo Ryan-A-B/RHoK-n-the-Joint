@@ -4,7 +4,20 @@
 1. Install Ruby
 2. Install Bundler (package manager for ruby) `gem install bundler` 
 3. Install gems (ruby packages) using bundler `bundle install`
-4. Run Server `shotgun app.rb`
+4. Start server with `shotgun app.rb`. Your server will now be listening on `http://localhost:9393`
+
+## Sinatra
+
+This project uses [Sinatra](http://www.sinatrarb.com), a micro framework for Ruby.
+
+### Static assets 
+
+Code that is in `./public` will automatically be served as static assets from the root path
+
+`./public/example.html` will be served from `http://localhost:9393/example.html`
+
+`./public/javascripts/app.js` will be served from `http://localhost:9393/javascripts/app.js`
+
 
 ## Example Answers
 ### Example Questionnaire Answers #1
