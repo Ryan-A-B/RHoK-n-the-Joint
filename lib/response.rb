@@ -8,6 +8,11 @@ class Response
     find_answer_by_value(question, answer_value)
   end
 
+  def count_answers(question_description)
+    question = find_question_by_description(question_description)
+    question["answers"].count
+  end
+
   private
 
   def find_question_by_description(string)

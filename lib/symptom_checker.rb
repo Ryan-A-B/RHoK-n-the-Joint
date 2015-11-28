@@ -4,8 +4,7 @@ class SymptomChecker
   end
 
   def find_symptoms
-       male_19 \
-    || female_28
+    diagnosis_1
   end
 
 private
@@ -20,4 +19,13 @@ private
     && @response.check_answer("Age", "28")
   end
 
+  def diagnosis_1
+    (@response.check_answer("Onset of symptoms", "> 1 month") || @response.check_answer("Onset of symptoms", "> 3 months")) \
+    && @response.check_answer("Regularity of symptoms", "intermittent") \
+    && @response.check_answer("Morning pain or stiffness", "> 60 mins") \
+    && (@response.count_answers("Articulations of head, neck and cervical and thoracic spine") >= 3)
+  end
+
 end
+
+
