@@ -8,13 +8,18 @@ require_relative 'lib/response'
 post '/answers' do
   response = Response.new(JSON.parse request.body.read)
 
-  if response.check_answer("Sex", "male")
-    '{ "message":"mechanical" }'
-  else
+  if male_19(response)
     '{ "message":"inflamatory" }'
+  else
+    '{ "message":"mechanical" }'
   end
+
 end
 
+def male_19(response)
+  response.check_answer("Sex", "male") \
+  && response.check_answer("Age", "19") \
+end
 
 ##### Example routes #####
 
