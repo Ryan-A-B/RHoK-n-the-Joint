@@ -1,10 +1,9 @@
 # RHoK-n-the-Joint
 
-
 ## Example Responses
 
 ```
-questions:[
+"questions":[
   {
     "id":"1",
     "description":"Age",
@@ -39,7 +38,7 @@ questions:[
 ```
 
 ```
-questions:[
+"questions":[
   {
     "id":"1",
     "description":"Age",
