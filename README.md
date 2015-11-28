@@ -2,17 +2,18 @@
 
 
 ## Example Responses
+
 ```
 questions:[
   {
     "id":"1",
     "description":"Age",
-    "answers":[{text":"27"}]
+    "answers":[{"id":"27", "value":"27"}]
   },
   {
     "id":"2",
     "description":"Sex",
-    "answers":[{"id":"1", "description":"female"}]
+    "answers":[{"id":"1", "value":"female"}]
   },
   {
     "id":"3",
@@ -32,31 +33,31 @@ questions:[
   {
     "id":"1",
     "description":"Age",
-    "answers":[{text":"38"}]
+    "answers":[{"id":"38", "value":"38"}]
   },
   {
     "id":"2",
     "description":"Sex",
-    "answers":[{"id":"2", "description":"male"}]
+    "answers":[{"id":"2", "value":"male"}]
   },
   {
     "id":"3",
     "description":"Morning pain or stiffness",
-    "answers":[{"id":"2", "description":"<30min"}]
+    "answers":[{"id":"2", "value":"<30min"}]
   },
   {
     "id":"4",
     "description":"Articulations of the wrist and hand",
     "answers":[
-      {"id":"1", "description":"Intercarpal articulations"},
-      {"id":"2", "description":"Carpometacarpal articulations"},
-      {"id":"3", "description":"Intermetacarpal articulations"},
-      {"id":"4", "description":"Metacarpophalangeal articulations"},
-      {"id":"5", "description":"Articulations of the digits"}
+      {"id":"1", "value":"Intercarpal articulations"},
+      {"id":"2", "value":"Carpometacarpal articulations"},
+      {"id":"3", "value":"Intermetacarpal articulations"},
+      {"id":"4", "value":"Metacarpophalangeal articulations"},
+      {"id":"5", "value":"Articulations of the digits"}
     ]
   }
 ]
-]
+
 ```
 
 
