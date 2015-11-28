@@ -22,7 +22,7 @@
   {
     "id":"4",
     "description":"Regularity of symptoms",
-    "answers":["id":"1", "persistant"]
+    "answers":["id":"1", "description":"persistant"]
   },
   {
     "id":"5",
@@ -57,7 +57,7 @@
   {
     "id":"4",
     "description":"Regularity of symptoms",
-    "answers":["id":"1", "intermittent"]
+    "answers":["id":"1", "description":"intermittent"]
   },
   {
     "id":"5",
