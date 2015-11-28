@@ -48,10 +48,14 @@ questions:[
     "id":"4",
     "description":"Articulations of the wrist and hand",
     "answers":[
-      {"id":"2", "description":"Intercarpal articulations"},
-      {"id":"3", "description":"Carpometacarpal articulations"}
+      {"id":"1", "description":"Intercarpal articulations"},
+      {"id":"2", "description":"Carpometacarpal articulations"},
+      {"id":"3", "description":"Intermetacarpal articulations"},
+      {"id":"4", "description":"Metacarpophalangeal articulations"},
+      {"id":"5", "description":"Articulations of the digits"}
     ]
   }
+]
 ]
 ```
 
