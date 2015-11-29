@@ -124,3 +124,7 @@ ul.navbar-nav a {
 .wrapper {
   min-height: calc(100vh - 60px);
 }
+
+.nav a {
+  color: #0071ce;
+}
