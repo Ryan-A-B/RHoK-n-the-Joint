@@ -126,8 +126,37 @@ angular.module('aqdaApp')
 
     }
 
+    $scope.indexOfQuestion = function(q){
+      for ( var i = 0; i < $scope.questions.length; i++ ){
+        var question = $scope.questions[i];
+        if ( question.id == q.id ){
+          return i;
+        }
+      }
+      return null;
+    }
+
     $scope.moveToQuestionWithId = function(id){
+      //the user can only move to a question if all the questions before it
+      //have valid answers
       var targetQuestion = null;
+      var allValid = true;
+      for ( var i = 0; i < $scope.questions.length; i++ ){
+        var question = $scope.questions[i];
+        if ( question.id == id ){
+          //found the question - check everything before it
+          for ( var j = 0; j < i; j++ ){
+            var otherQuestion = $scope.questions[j];
+            allValid = $scope.answerValid(otherQuestion);
+            if ( !allValid ){
+              break;
+            }
+          }
+        }
+      }
+      if ( !allValid ){
+        return;
+      }
       for ( var i = 0; i < $scope.questions.length; i++ ){
         var question = $scope.questions[i];
         if ( question.id == id ){
