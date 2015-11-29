@@ -141,6 +141,11 @@ ul.navbar-nav a {
   min-height: calc(100vh - 60px);
 }
 
-.nav a {
+a.default {
   color: #0071ce;
+  text-decoration: none;
+}
+
+a.default:hover {
+  color: #015ca7;
 }
