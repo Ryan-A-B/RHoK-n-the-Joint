@@ -21,16 +21,16 @@ end
 
 # http://localhost:9393/
 # returns the string 'Hello world!'
-get '/' do
-  'Hello world!'
-end
+#get '/' do
+#  'Hello world!'
+#end
 
 get '/login' do
   erb :login
 end
 
 post '/login' do
-  redirect '/'
+  redirect '/index.html'
 end
 
 # POST http://localhost:9393/echo

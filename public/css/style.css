@@ -1,3 +1,7 @@
+@font-face {
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
 body {
   color: white;
   font-weight: 700;
@@ -41,7 +45,7 @@ a:hover {
 }
 
 .wrapper {
-  min-height: calc(100vh - 60px);
+  min-height: calc(100vh - 140px);
 }
 
 .disclaimer {
