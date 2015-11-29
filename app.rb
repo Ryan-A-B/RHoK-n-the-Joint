@@ -25,8 +25,8 @@ post '/responses' do
     '{
         "type": "Inflammatory",
         "strains": [
-	        {"url":"docs/Rheumatoid-arthritis.pdf", "name": "Rheumatoid Arthritis"},
-          {"url":"docs/Psoriatic-arthritis.pdf", "name": "Psoriatic Arthritis"},
+	  {"url":"docs/Rheumatoid-arthritis.pdf", "name": "Rheumatoid Arthritis"},
+          {"url":"docs/Psoriatic-arthritis.pdf",  "name": "Psoriatic Arthritis"},
           {"url":"http://www.arthritis.org.au/arthritis/fibromyalgia/", "name": "Fibromyalgia"}
         ]
     }'
@@ -35,8 +35,8 @@ post '/responses' do
         "type":"Mechanical",
         "strains": [
           {"url":"docs/Osteoarthritis.pdf", "name": "Osteoarthritis"},
-          {"url":"https://www.google.com", "name": "Traumatic injury"},
-          {"url":"https://www.google.com", "name": "Injury of mechanical nature"}
+          {"url":"https://www.google.com",  "name": "Traumatic injury"},
+          {"url":"https://www.google.com",  "name": "Injury of mechanical nature"}
         ]
     }'
   end
