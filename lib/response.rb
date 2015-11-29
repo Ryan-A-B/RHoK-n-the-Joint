@@ -13,6 +13,11 @@ class Response
     question["answers"].count
   end
 
+  def answer_value(question_description)
+    question = find_question_by_description(question_description)
+    question["answers"].first["value"]
+  end
+
   private
 
   def find_question_by_description(string)

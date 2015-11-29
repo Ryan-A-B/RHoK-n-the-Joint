@@ -20,7 +20,8 @@ private
   end
 
   def diagnosis_1
-    (@response.check_answer("Onset of symptoms", "> 1 month") || @response.check_answer("Onset of symptoms", "> 3 months")) \
+    (@response.answer_value("Age") >= 50 ) \
+    && (@response.check_answer("Onset of symptoms", "> 1 month") || @response.check_answer("Onset of symptoms", "> 3 months")) \
     && @response.check_answer("Regularity of symptoms", "intermittent") \
     && @response.check_answer("Morning pain or stiffness", "> 60 mins") \
     && (@response.count_answers("Articulations of head, neck and cervical and thoracic spine") >= 3)
