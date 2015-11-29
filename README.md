@@ -30,8 +30,13 @@ Code that is in `public/` will automatically be served as static assets from the
 
 Insert `binding.pry` into your code and exection will stop here. You can then inspect the window running the server and interactively debug.
 
-## Example Answers
-### Example Questionnaire Answers #1
+### Tests
+
+We have tests! Run the test suite using `ruby test/responses_test.rb`
+
+## API
+
+### Example Questionnaire Responses #1
 
 This request will return an inflammatory diagnosis.
 
@@ -88,7 +93,7 @@ This request will return an inflammatory diagnosis.
 }
 ```
 
-### Example Questionnaire Answers #2
+### Example Questionnaire Responses #2
 
 This request will return an inflammatory diagnosis.
 
@@ -142,7 +147,7 @@ This request will return an inflammatory diagnosis.
 ```
 
 
-### Example Questionnaire Answers #3
+### Example Questionnaire Responses #3
 
 This request will return an mechanical diagnosis.
 
