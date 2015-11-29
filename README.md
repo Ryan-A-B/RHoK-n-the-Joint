@@ -36,9 +36,7 @@ We have tests! Run the test suite using `ruby test/responses_test.rb`
 
 ## API
 
-### Example Questionnaire Responses
-
-#### Example Questionnaire Answers #1
+### Example Questionnaire Responses #1
 
 This request will return an inflammatory diagnosis.
 
@@ -95,7 +93,7 @@ This request will return an inflammatory diagnosis.
 }
 ```
 
-#### Example Questionnaire Responses #2
+### Example Questionnaire Responses #2
 
 This request will return an inflammatory diagnosis.
 
@@ -149,7 +147,7 @@ This request will return an inflammatory diagnosis.
 ```
 
 
-#### Example Questionnaire Responses #3
+### Example Questionnaire Responses #3
 
 This request will return an mechanical diagnosis.
 
