@@ -9,7 +9,7 @@
 4. Start server with `shotgun app.rb`. Your server will now be listening on `http://localhost:9393`
 
 ## Running under Docker
-1. Install Docker! Guides for [http://docs.docker.com/windows/started/](Windows), [http://docs.docker.com/mac/started/](Mac) and [http://docs.docker.com/linux/started/](Linux)
+1. Install Docker! Guides for [Windows](http://docs.docker.com/windows/started/), [Mac](http://docs.docker.com/mac/started/) and [Linux](http://docs.docker.com/linux/started/)
 2. Open a Docker command line, change to the project directory and run `docker build ./`
 3. Once the image is built, run `docker run --rm -p 9393:9393 <container id>`
 4. The application is now accessible on port 9393 on your Docker host.
