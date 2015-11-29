@@ -34,8 +34,11 @@ Insert `binding.pry` into your code and exection will stop here. You can then in
 
 We have tests! Run the test suite using `ruby test/responses_test.rb`
 
-## Example Answers
-### Example Questionnaire Answers #1
+## API
+
+### Example Questionnaire Responses
+
+#### Example Questionnaire Answers #1
 
 This request will return an inflammatory diagnosis.
 
@@ -92,7 +95,7 @@ This request will return an inflammatory diagnosis.
 }
 ```
 
-### Example Questionnaire Answers #2
+#### Example Questionnaire Responses #2
 
 This request will return an inflammatory diagnosis.
 
@@ -146,7 +149,7 @@ This request will return an inflammatory diagnosis.
 ```
 
 
-### Example Questionnaire Answers #3
+#### Example Questionnaire Responses #3
 
 This request will return an mechanical diagnosis.
 
