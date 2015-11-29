@@ -1,9 +1,10 @@
 <div class="container-fluid top-block" style="color: white; min-height: 146px;">
   <div class="container">
     <div class="col-md-12" style="text-align: center; padding: 50px;" ng-hide="!answerValid(question)">
-      <button type="button" class="btn btn-default btn-lg" ng-click="moveToNextQuestionFromQuestion(question)" ng-if="questionsExistAfterQuestion(question)">Next</button>
 
-      <button type="button" class="btn btn-default btn-lg" ng-click="completeSurvey()" ng-if="!questionsExistAfterQuestion(question) && surveyValid()">Complete</button>
+      <button type="button" class="btn btn-default btn-lg aqdaControl aqdaBigButton" ng-click="moveToNextQuestionFromQuestion(question)" ng-if="questionsExistAfterQuestion(question)" style="width: 200px; height: 70px;">Next</button>
+
+      <button type="button" class="btn btn-default btn-lg aqdaControl aqdaBigButton" ng-click="completeSurvey()" ng-if="!questionsExistAfterQuestion(question) && surveyValid()" style="width: 250px; height: 70px;">Complete</button>
 
       <p ng-if="!questionsExistAfterQuestion(question)" ng-hide="surveyValid()">
         Please check that all questions have been answered

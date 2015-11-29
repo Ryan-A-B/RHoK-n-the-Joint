@@ -7,28 +7,35 @@ require_relative 'lib/response'
 require_relative 'lib/symptom_checker'
 
 get '/' do
-  redirect '/index.html'
+  redirect '/login'
+end
+
+post '/login' do
+  redirect '/survey.html'
 end
 
 post '/responses' do
+
+ # rheumatoid_json = String.new(' {"url":"http://www.arthritis.org.au/arthritis/rheumatoid-arthritis/", "name": "Rheumatoid Arthritis"},')
+
   response = Response.new(JSON.parse request.body.read)
 
   if SymptomChecker.new(response).find_symptoms
     '{
         "type": "Inflammatory",
         "strains": [
-          {"url":"https://www.google.com", "name": "Rheumatoid Arthritis"},
+	        {"url":"http://www.arthritis.org.au/arthritis/rheumatoid-arthritis/", "name": "Rheumatoid Arthritis"},
           {"url":"https://www.google.com", "name": "Psoriatic Arthritis"},
-          {"url":"https://www.google.com", "name": "Fibromyalgia"}
+          {"url":"http://www.arthritis.org.au/arthritis/fibromyalgia/", "name": "Fibromyalgia"}
         ]
     }'
   else
     '{
         "type":"Mechanical",
         "strains": [
-          {"url":"https://www.google.com", "name": "Rheumatoid Arthritis"},
-          {"url":"https://www.google.com", "name": "Psoriatic Arthritis"},
-          {"url":"https://www.google.com", "name": "Fibromyalgia"}
+          {"url":"https://www.google.com", "name": "Osteoarthritis"},
+          {"url":"https://www.google.com", "name": "Traumatic injury"},
+          {"url":"https://www.google.com", "name": "Injury of mechanical nature"}
         ]
     }'
   end

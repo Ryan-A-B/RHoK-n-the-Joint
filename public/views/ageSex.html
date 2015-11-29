@@ -3,8 +3,8 @@
 
     <div class="container" id="question-{{question.id}}-container">
       <div class="row">
-        <div class="col-md-12" style="text-align: center;">
-          <h4>{{question.section}}</h4>
+        <div class="col-md-12" style="text-align: center; font-size: 12px; padding-top: 10px;">
+          <h4>{{question.section.toUpperCase()}}</h4>
         </div>
       </div>
 
@@ -18,8 +18,8 @@
       <div class="row">
         <div class="col-md-12" style="text-align: center;">
           <h2>Sex</h2>
-          <button type="button" class="btn btn-default btn-lg question-form-control" ng-class="{'btn-circle-selected': (answers.sex=='Female'), 'question-form-control-unselected': (answers.sex!='Female')}" ng-click="setSex('Female')" style="width: 148px">Female</button>
-          <button type="button" class="btn btn-default btn-lg question-form-control" ng-class="{'btn-circle-selected': (answers.sex=='Male'), 'question-form-control-unselected': (answers.sex!='Male')}" ng-click="setSex('Male')" style="width: 148px">Male</button>
+          <button type="button" class="btn btn-default btn-lg aqdaControl aqdaBigButton" ng-class="{'btn-circle-selected': (answers.sex=='Female'), 'question-form-control-unselected': (answers.sex!='Female')}" ng-click="setSex('Female')" style="width: 145px">Female</button>
+          <button type="button" class="btn btn-default btn-lg aqdaControl aqdaBigButton" ng-class="{'btn-circle-selected': (answers.sex=='Male'), 'question-form-control-unselected': (answers.sex!='Male')}" ng-click="setSex('Male')" style="width: 145px">Male</button>
         </div>
       </div>
 

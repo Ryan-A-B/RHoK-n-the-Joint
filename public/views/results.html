@@ -1,6 +1,5 @@
 <div ng-hide="results == null" class="question-area">
   <div class="container-fluid top-block" style="color: white;">
-
     <div class="container" id="results-container">
       <div class="row">
         <div class="col-md-6 col-md-offset-3" style="text-align: center;">
@@ -8,17 +7,16 @@
           <table class="strainTable">
             <tbody>
               <tr ng-repeat="strain in results.strains">
-                <td><a href="{{strain.url}}">{{strain.name}}</a></td>
+                <td><a target="_blank" href="{{strain.url}}">{{strain.name}}</a></td>
               </tr>
             </tbody>
           </table>
           <div style="padding-top: 50px;">
-            <button type="button" class="btn btn-default btn-lg question-form-control question-form-control-unselected"style="width: auto; font-size: 15px;" data-toggle='modal' data-target='#info'>Patient Info</button>
-            <button type="button" class="btn btn-default btn-lg question-form-control question-form-control-unselected"style="width: auto; font-size: 15px;" data-toggle='modal' data-target='#referals'>Generate Referral</button>
+            <button type="button" class="btn btn-default btn-lg aqdaControl aqdaBigButton"style="width: 180px; height: 60px; font-size: 15px;" data-toggle='modal' data-target='#info'>Patient Info</button>
+            <button type="button" class="btn btn-default btn-lg aqdaControl aqdaBigButton"style="width: 180px; height: 60px; font-size: 15px;" data-toggle='modal' data-target='#referals'>Generate Referral</button>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </div>
