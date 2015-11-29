@@ -6,6 +6,10 @@ require 'pry'
 require_relative 'lib/response'
 require_relative 'lib/symptom_checker'
 
+get '/' do
+  redirect '/index.html'
+end
+
 post '/responses' do
   response = Response.new(JSON.parse request.body.read)
 
@@ -32,12 +36,6 @@ post '/responses' do
 end
 
 ##### Example routes #####
-
-# http://localhost:9393/
-# returns the string 'Hello world!'
-get '/' do
-  'Hello world!'
-end
 
 get '/login' do
   erb :login
