@@ -6,7 +6,7 @@ require 'pry'
 require_relative 'lib/response'
 require_relative 'lib/symptom_checker'
 
-post '/answers' do
+post '/responses' do
   response = Response.new(JSON.parse request.body.read)
 
   if SymptomChecker.new(response).find_symptoms
@@ -23,6 +23,14 @@ end
 # returns the string 'Hello world!'
 get '/' do
   'Hello world!'
+end
+
+get '/login' do
+  erb :login
+end
+
+post '/login' do
+  redirect '/'
 end
 
 # POST http://localhost:9393/echo
