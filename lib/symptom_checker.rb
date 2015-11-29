@@ -12,7 +12,7 @@ private
 
   def diagnostic_criteria_possible_ra
     (@response.answer_value("Age") <= 50 ) \
-    && (@response.check_answer("Onset of symptoms", "> 1 Month") || @response.check_answer("Onset of symptoms", "> 3 months")) \
+    && (@response.check_answer("Onset of symptoms", "> 1 Month") || @response.check_answer("Onset of symptoms", "> 3 Months")) \
     && @response.check_answer("Regularity of symptoms", "Intermittent") \
     && @response.check_answer("Morning pain or stiffness", "> 60 mins") \
     && (@response.count_answers("Articulations of the upper limb") >= 2)
