@@ -1,0 +1,33 @@
+<div ng-hide="!question.active" class="question-area">
+  <div class="container-fluid top-block" style="color: white;">
+
+    <div class="container" id="question-{{question.id}}-container">
+      <div class="row">
+        <div class="col-md-12" style="text-align: center;">
+          <h4>{{question.section}}</h4>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12" style="text-align: center;">
+          <h2>Age</h2>
+          <input type="text" class="form-control question-form-control question-form-control-unselected" id="answer-{{question.id}}" style="width: 300px; margin-left: auto; margin-right: auto;" ng-model="answers.age">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12" style="text-align: center;">
+          <h2>Sex</h2>
+          <button type="button" class="btn btn-default btn-lg question-form-control" ng-class="{'btn-circle-selected': (answers.sex=='Female'), 'question-form-control-unselected': (answers.sex!='Female')}" ng-click="setSex('Female')" style="width: 148px">Female</button>
+          <button type="button" class="btn btn-default btn-lg question-form-control" ng-class="{'btn-circle-selected': (answers.sex=='Male'), 'question-form-control-unselected': (answers.sex!='Male')}" ng-click="setSex('Male')" style="width: 148px">Male</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <span ng-include="'views/nextDone.html'">
+
+  </span>
+
+</div>

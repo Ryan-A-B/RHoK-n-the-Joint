@@ -24,97 +24,107 @@ Insert `binding.pry` into your code and exection will stop here. You can then in
 
 ## Example Answers
 ### Example Questionnaire Answers #1
+
+This request will return an inflammatory diagnosis.
+
 ```
 {
   "questions":[
     {
-      "id":"1",
+      "id":1,
       "description":"Age",
       "answers":[
-        {"id":null, "value":"27"}
+        {"id":null, "value":60}
       ]
     },
     {
-      "id":"2",
+      "id":2,
       "description":"Sex",
       "answers":[
-        {"id":"1", "value":"female"}
+        {"id":1, "value":"female"}
       ]
     },
     {
-      "id":"3",
+      "id":3,
       "description":"Onset of symptoms",
       "answers":[
-        {"id":"1", "description":"< 1 month"}
+        {"id":1, "value":"> 1 month"}
       ]
     },
     {
-      "id":"4",
+      "id":4,
       "description":"Regularity of symptoms",
       "answers":[
-        {"id":"1", "description":"persistant"}
+        {"id":1, "value":"intermittent"}
       ]
     },
     {
-      "id":"5",
+      "id":5,
       "description":"Morning pain or stiffness",
-      "answers":[]
+      "answers":[
+        {"id":3, "value":"> 60 mins"}
+      ]
     },
     {
-      "id":"6",
-      "description":"Articulations of the head, neck and cervical and thoracic spine",
-      "answers":[]
+      "id":6,
+      "description":"Articulations of head, neck and cervical and thoracic spine",
+      "answers":[
+        {"id":1, "value":"Articulations of the mandible"},
+        {"id":2, "value":"Articulations of the vertebral column with the cranium"},
+        {"id":3, "value":"Articulation of the atlas with the epistropheous or axis"},
+        {"id":4, "value":"Costovertebral articulations"}
+      ]
     }
   ]
 }
 ```
 
 ### Example Questionnaire Answers #2
+
+This request will return an mechanical diagnosis.
+
 ```
 {
   "questions":[
     {
-      "id":"1",
+      "id":1,
       "description":"Age",
-      "answers":[{"id":null, "value":"38"}]
+      "answers":[
+        {"id":null, "value":28}
+      ]
     },
     {
-      "id":"2",
+      "id":2,
       "description":"Sex",
       "answers":[
-        {"id":"2", "value":"male"}
+        {"id":1, "value":"female"}
       ]
     },
     {
-      "id":"3",
+      "id":3,
       "description":"Onset of symptoms",
       "answers":[
-        {"id":"3", "description":"> 3 months"}
+        {"id":1, "value":"> 1 month"}
       ]
     },
     {
-      "id":"4",
+      "id":4,
       "description":"Regularity of symptoms",
       "answers":[
-        {"id":"1", "description":"intermittent"}
+        {"id":1, "value":"intermittent"}
       ]
     },
     {
-      "id":"5",
+      "id":5,
       "description":"Morning pain or stiffness",
       "answers":[
-        {"id":"2", "value":"< 30mina"}
+        {"id":3, "value":"> 60 mins"}
       ]
     },
     {
-      "id":"6",
+      "id":6,
       "description":"Articulations of head, neck and cervical and thoracic spine",
-      "answers":[
-        {"id":"1", "value":"Articulations of the mandible"},
-        {"id":"2", "value":"Articulations of the vertebral column with the cranium"},
-        {"id":"3", "value":"Articulation of the atlas with the epistropheous or axis"},
-        {"id":"4", "value":"Costovertebral articulations"}
-      ]
+      "answers":[]
     }
   ]
 }

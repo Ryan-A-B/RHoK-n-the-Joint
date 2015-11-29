@@ -4,17 +4,18 @@ require 'json'
 require 'pry'
 
 require_relative 'lib/response'
+require_relative 'lib/symptom_checker'
 
 post '/answers' do
   response = Response.new(JSON.parse request.body.read)
 
-  if response.check_answer("Sex", "male")
-    '{ "message":"mechanical" }'
-  else
+  if SymptomChecker.new(response).find_symptoms
     '{ "message":"inflamatory" }'
+  else
+    '{ "message":"mechanical" }'
   end
-end
 
+end
 
 ##### Example routes #####
 
