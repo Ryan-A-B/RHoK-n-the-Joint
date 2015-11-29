@@ -1,6 +1,6 @@
 @font-face {
     font-family: museo-sans;
-    src: url(/fonts/MuseoSans_300.otf);
+    src: url(./fonts/MuseoSans_300.otf);
 }
 
 body {

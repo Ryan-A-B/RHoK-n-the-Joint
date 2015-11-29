@@ -1,0 +1,28 @@
+<main id="content" role="main">
+  <div class="container-fluid top-block" style="padding-top: 80px;">
+    <div class="container">
+      <div class="row" style="text-align: center; color: white;">
+        <div class="col-md-12">
+          <div class="indicators" ng-hide="results != null">
+            <span ng-repeat="question in questions">
+              <span class='indicator' ng-class="{active: question.active}" >
+                  <button type='button' ng-click="moveToQuestionWithId(question.id)"></button>
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div ng-repeat="question in questions">
+    <span ng-if="question.type != 'ageSex'" ng-include="'views/question.html'">
+
+    </span>
+    <span ng-if="question.type == 'ageSex'" ng-include="'views/ageSex.html'">
+
+    </span>
+  </div>
+  <span ng-include="'views/results.html'">
+
+  </span>
+</main>
