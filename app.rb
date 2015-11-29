@@ -6,19 +6,36 @@ require 'pry'
 require_relative 'lib/response'
 require_relative 'lib/symptom_checker'
 
-post '/answers' do
+get '/' do
+  redirect '/index.html'
+end
+
+post '/responses' do
   response = Response.new(JSON.parse request.body.read)
 
   if SymptomChecker.new(response).find_symptoms
-    '{ "message":"inflamatory" }'
+    '{
+        type: "Inflammatory",
+        strains: [
+          {url:"https://www.google.com", name: "Rheumatoid Arthritis"},
+          {url:"https://www.google.com", name: "Psoriatic Arthritis"},
+          {url:"https://www.google.com", name: "Fibromyalgia"}
+        ]
+    }'
   else
-    '{ "message":"mechanical" }'
+    '{
+        type: "Mechanical",
+        strains: [
+          {url:"https://www.google.com", name: "Rheumatoid Arthritis"},
+          {url:"https://www.google.com", name: "Psoriatic Arthritis"},
+          {url:"https://www.google.com", name: "Fibromyalgia"}
+        ]
+    }'
   end
 
 end
 
 ##### Example routes #####
-
 # http://localhost:9393/
 # returns the string 'Hello world!'
 #get '/' do

@@ -9,7 +9,61 @@ angular.module('aqdaApp')
 
     };
 
+    $scope.buildSubmission = function(){
+      var submission = [
+        {
+          "id":1,
+          "description":"Age",
+          "answers":[]
+        },
+        {
+          "id":2,
+          "description":"Sex",
+          "answers":[]
+        }
+      ];
+      //break age and sex into separate questions
+      submission[0].answers.push({"id":null, "value": $scope.answers.age});
+      var sexAnswer = null;
+      if ( $scope.answers.sex == 'Male' ){
+        sexAnswer = {"id":2, "value":"male"};
+      }else{
+        sexAnswer = {"id":1, "value":"female"};
+      }
+      submission[1].answers.push(sexAnswer);
+      //now skip over the first question which is the ageSex question and
+      //build the submission JSON
+      for ( var i = 1; i < $scope.questions.length; i++ ){
+        var question = $scope.questions[i];
+        var answer = $scope.answers[question.id];
+        var submissionAnswer = {
+          "id":question.id,
+          "description":question.description,
+          "answers":[]
+        };
+        if (question.type == "yesNo"){
+          if ( question.noSelected ){
+            //do nothing
+          }else if ( question.yesSelected ){
+            //check if theres a sub question - if there is, use that answer
+            if ( question.subQuestion != null ){
+              submissionAnswer.answers = answer.detailedAnswers;
+            }else{
+              submissionAnswer.push({"id":"0", "value":"yes"});
+            }
+          }
+        }else if ( question.type == 'select' ){
+          submissionAnswer.answers = answer.detailedAnswers;
+        }else if ( question.type == 'multiSelect' ){
+          submissionAnswer.answers = answer.detailedAnswers;
+        }
+        submission.push(submissionAnswer);
+      }
+      console.log(submission);
+    }
+
     $scope.completeSurvey = function(){
+      $scope.buildSubmission();
       for (var i = 0; i < $scope.questions.length; i++ ){
         var q = $scope.questions[i];
         q.active = false;
@@ -106,7 +160,6 @@ angular.module('aqdaApp')
 
     $scope.questionsExistAfterQuestion = function(q){
       var exists = $scope.questionAfterQuestion(q) != null;
-      console.log(q, exists);
       return exists;
     }
 
@@ -172,9 +225,9 @@ angular.module('aqdaApp')
         "description":"Onset of Symptoms",
         "type":"select",
         "options":[
-          {"id":1, "value":"<1 Month"},
-          {"id":2, "value":">1 Month"},
-          {"id":3, "value":">3 Months"}
+          {"id":1, "value":"< 1 Month"},
+          {"id":2, "value":"> 1 Month"},
+          {"id":3, "value":"> 3 Months"}
         ],
         "section":"History"
       },
@@ -197,10 +250,10 @@ angular.module('aqdaApp')
           "description":"How long does the pain last",
           "type":"select",
           "options":[
-            {"id":1, "value":"<30 min"},
-            {"id":2, "value":">30 min"},
-            {"id":3, "value":"30-60 min"},
-            {"id":4, "value":">60 min"}
+            {"id":1, "value":"< 30 mins"},
+            {"id":2, "value":"> 30 mins"},
+            {"id":3, "value":"30-60 mins"},
+            {"id":4, "value":"> 60 mins"}
           ]
         },
         "active":false,
@@ -208,16 +261,16 @@ angular.module('aqdaApp')
       },
       {
         "id":6,
-        "description":"Articulations of the head, neck and cervical and thoracic spine",
+        "description":"Articulations of the upper limb",
         "type":"yesNo",
         "subQuestion":{
           "type":"multiSelect",
           "options":[
-            {"id":1, "value":"Articulations of the mandible"},
-            {"id":2, "value":"Articulations of the manubrium and body of the sternum"},
-            {"id":3, "value":"Sternoclavicular articulation"},
-            {"id":4, "value":"Acromioclavicular articulations"},
-            {"id":5, "value":"Humeral articulation"}
+            {"id":1, "value":"Elbow joint articulations"},
+            {"id":2, "value":"Radio ulnar articulations"},
+            {"id":3, "value":"Carpometacarpal articulations"},
+            {"id":4, "value":"Metacarpophalangeal articulations"},
+            {"id":5, "value":"Articulations of the digits"}
           ]
         },
         "active":false,

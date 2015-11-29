@@ -4,29 +4,27 @@ class SymptomChecker
   end
 
   def find_symptoms
-    diagnosis_1
+    diagnostic_criteria_possible_ra \
+    || diagnostic_criteria_possible_oa
   end
 
 private
 
-  def male_19
-    @response.check_answer("Sex", "male") \
-    && @response.check_answer("Age", "19")
-  end
-
-  def female_28
-    @response.check_answer("Sex", "female") \
-    && @response.check_answer("Age", "28")
-  end
-
-  def diagnosis_1
-    (@response.answer_value("Age") >= 50 ) \
-    && (@response.check_answer("Onset of symptoms", "> 1 month") || @response.check_answer("Onset of symptoms", "> 3 months")) \
-    && @response.check_answer("Regularity of symptoms", "intermittent") \
+  def diagnostic_criteria_possible_ra
+    (@response.answer_value("Age") <= 50 ) \
+    && (@response.check_answer("Onset of symptoms", "> 1 Month") || @response.check_answer("Onset of symptoms", "> 3 months")) \
+    && @response.check_answer("Regularity of symptoms", "Intermittent") \
     && @response.check_answer("Morning pain or stiffness", "> 60 mins") \
-    && (@response.count_answers("Articulations of head, neck and cervical and thoracic spine") >= 3)
+    && (@response.count_answers("Articulations of the upper limb") >= 2)
+  end
+
+  def diagnostic_criteria_possible_oa
+    (@response.answer_value("Age") >= 50 ) \
+    && @response.check_answer("Onset of symptoms", "> 3 Months") \
+    && @response.check_answer("Regularity of symptoms", "Persistant") \
+    && @response.check_answer("Morning pain or stiffness", "< 30 mins") \
+    && (@response.check_answer("Articulations of the upper limb", "Elbow joint articulations") || @response.check_answer("Articulations of the upper limb", "Articulations of the digits"))
   end
 
 end
-
 
