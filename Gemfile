@@ -3,7 +3,10 @@ source 'https://rubygems.org'
 gem 'sinatra'
 gem 'sinatra-partial', require: 'sinatra/partial'
 
-group :development do 
+gem 'pry'     # debugging tool
+
+
+group :development do
   gem 'shotgun' # server that reloads when files change
   gem 'pry'     # debugging tool
 end
