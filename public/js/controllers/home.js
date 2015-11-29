@@ -68,6 +68,7 @@ angular.module('aqdaApp')
         $scope.results = results;
       }, function(err){
         alert("Error encountered - Faking it");
+        console.log(err);
         $scope.results = {
           type: 'Mechanical',
           strains: [

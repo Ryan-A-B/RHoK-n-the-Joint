@@ -15,20 +15,20 @@ post '/responses' do
 
   if SymptomChecker.new(response).find_symptoms
     '{
-        type: "Inflammatory",
-        strains: [
-          {url:"https://www.google.com", name: "Rheumatoid Arthritis"},
-          {url:"https://www.google.com", name: "Psoriatic Arthritis"},
-          {url:"https://www.google.com", name: "Fibromyalgia"}
+        "type": "Inflammatory",
+        "strains": [
+          {"url":"https://www.google.com", "name": "Rheumatoid Arthritis"},
+          {"url":"https://www.google.com", "name": "Psoriatic Arthritis"},
+          {"url":"https://www.google.com", "name": "Fibromyalgia"}
         ]
     }'
   else
     '{
-        type: "Mechanical",
-        strains: [
-          {url:"https://www.google.com", name: "Rheumatoid Arthritis"},
-          {url:"https://www.google.com", name: "Psoriatic Arthritis"},
-          {url:"https://www.google.com", name: "Fibromyalgia"}
+        "type":"Mechanical",
+        "strains": [
+          {"url":"https://www.google.com", "name": "Rheumatoid Arthritis"},
+          {"url":"https://www.google.com", "name": "Psoriatic Arthritis"},
+          {"url":"https://www.google.com", "name": "Fibromyalgia"}
         ]
     }'
   end
