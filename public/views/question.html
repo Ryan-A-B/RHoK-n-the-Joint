@@ -1,0 +1,63 @@
+<div ng-hide="!question.active" class="question-area">
+  <div class="container-fluid top-block" style="color: white;">
+
+    <div class="container" id="question-{{question.id}}-container">
+      <div class="row">
+        <div class="col-md-12" style="text-align: center;">
+          <h4>{{question.section}}</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12" style="text-align: center;">
+          <h1>Q{{question.id}}. {{question.description}}</h1>
+        </div>
+      </div>
+
+      <div class="row" ng-if="question.type == 'yesNo'" style="text-align: center;">
+        <div style="padding: 20px; display: inline-block;">
+          <div style="padding-bottom: 10px">
+            <a class="btn btn-default btn-circle" ng-class="{'btn-circle-selected': answers[question.id].yesSelected}" ng-click="yesNoSelected(question, true)">
+            </a>
+          </div>
+          Yes
+        </div>
+        <div style="padding: 20px; display: inline-block;">
+          <div style="padding-bottom: 10px">
+            <a class="btn btn-default btn-circle" ng-class="{'btn-circle-selected': answers[question.id].noSelected}" ng-click="yesNoSelected(question, false)"></a>
+          </div>
+          No
+        </div>
+      </div>
+
+      <div class="row" ng-if="question.type=='select'" style="text-align: center;">
+        <div class="col-md-12" style="text-align: center">
+          <div style="padding: 20px; display: inline-block; width: 200px; vertical-align: top;" ng-repeat="option in question.options">
+            <div style="padding-bottom: 10px">
+              <a href="#" class="btn btn-default btn-circle" ng-class="{'btn-circle-selected':optionSelected(question, option)}" ng-click="detailedAnswerSelected(question, option)"></a>
+            </div>
+            {{option.value}}
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container-fluid middle-block" ng-if="question.subQuestion != null" ng-hide="!answers[question.id].yesSelected">
+    <div class="container">
+      <div class="col-md-12" style="text-align: center">
+        <div style="padding: 20px; display: inline-block; width: 200px; vertical-align: top;" ng-repeat="option in question.subQuestion.options">
+          <div style="padding-bottom: 10px">
+            <a href="#" class="btn btn-default btn-circle" ng-class="{'btn-circle-selected':optionSelected(question, option)}" ng-click="detailedAnswerSelected(question, option)"></a>
+          </div>
+          {{option.value}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <span ng-include="'views/nextDone.html'">
+
+  </span>
+
+</div>
