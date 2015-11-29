@@ -8,7 +8,6 @@ gem 'pry'     # debugging tool
 
 group :development do
   gem 'shotgun' # server that reloads when files change
-  gem 'pry'     # debugging tool
 end
 
 group :test do
