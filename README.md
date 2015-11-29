@@ -30,6 +30,10 @@ Code that is in `public/` will automatically be served as static assets from the
 
 Insert `binding.pry` into your code and exection will stop here. You can then inspect the window running the server and interactively debug.
 
+###
+
+Run the test suite using `ruby test/responses_test.rb`
+
 ## Example Answers
 ### Example Questionnaire Answers #1
 
