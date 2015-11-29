@@ -62,3 +62,8 @@ a:hover {
 
   background-color: #015ca7;
 }
+
+.footer p {
+  color: white;
+  font-weight: 700;
+}
