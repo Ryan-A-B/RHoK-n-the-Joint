@@ -225,9 +225,9 @@ angular.module('aqdaApp')
         "description":"Onset of Symptoms",
         "type":"select",
         "options":[
-          {"id":1, "value":"<1 Month"},
-          {"id":2, "value":">1 Month"},
-          {"id":3, "value":">3 Months"}
+          {"id":1, "value":"< 1 Month"},
+          {"id":2, "value":"> 1 Month"},
+          {"id":3, "value":"> 3 Months"}
         ],
         "section":"History"
       },
@@ -250,10 +250,10 @@ angular.module('aqdaApp')
           "description":"How long does the pain last",
           "type":"select",
           "options":[
-            {"id":1, "value":"<30 min"},
-            {"id":2, "value":">30 min"},
-            {"id":3, "value":"30-60 min"},
-            {"id":4, "value":">60 min"}
+            {"id":1, "value":"< 30 mins"},
+            {"id":2, "value":"> 30 mins"},
+            {"id":3, "value":"30-60 mins"},
+            {"id":4, "value":"> 60 mins"}
           ]
         },
         "active":false,
