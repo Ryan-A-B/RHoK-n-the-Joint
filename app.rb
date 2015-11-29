@@ -26,9 +26,9 @@ post '/responses' do
     '{
         "type":"Mechanical",
         "strains": [
-          {"url":"https://www.google.com", "name": "Rheumatoid Arthritis"},
-          {"url":"https://www.google.com", "name": "Psoriatic Arthritis"},
-          {"url":"https://www.google.com", "name": "Fibromyalgia"}
+          {"url":"https://www.google.com", "name": "Osteoarthritis"},
+          {"url":"https://www.google.com", "name": "Traumatic injury"},
+          {"url":"https://www.google.com", "name": "Injury of mechanical nature"}
         ]
     }'
   end
