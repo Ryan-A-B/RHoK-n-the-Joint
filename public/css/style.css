@@ -58,7 +58,7 @@ a:hover {
   height: 60px;
 
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 
   background-color: #015ca7;
 }
@@ -66,4 +66,5 @@ a:hover {
 .footer p {
   color: white;
   font-weight: 700;
+  padding: 15px;
 }

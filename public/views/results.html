@@ -1,6 +1,5 @@
 <div ng-hide="results == null" class="question-area">
   <div class="container-fluid top-block" style="color: white;">
-
     <div class="container" id="results-container">
       <div class="row">
         <div class="col-md-6 col-md-offset-3" style="text-align: center;">
@@ -13,12 +12,79 @@
             </tbody>
           </table>
           <div style="padding-top: 50px;">
-            <button type="button" class="btn btn-default btn-lg question-form-control question-form-control-unselected"style="width: auto; font-size: 15px;">Patient Info</button>
-            <button type="button" class="btn btn-default btn-lg question-form-control question-form-control-unselected"style="width: auto; font-size: 15px;">Generate Referral</button>
+            <button type="button" class="btn btn-default btn-lg aqdaControl aqdaBigButton"style="width: 180px; height: 60px; font-size: 15px; padding-left: 15px;">Patient Info</button>
+            <button type="button" class="btn btn-default btn-lg aqdaControl aqdaBigButton"style="width: 180px; height: 60px; font-size: 15px;">Generate Referral</button>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </div>
+<div class="modal modal-lg fade" tabindex="-1" id='referals' role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" style='color: #0071ce;'>Doctors</h4>
+      </div>
+      <div class="modal-body">
+        <div class='row'>
+          <div class='col-xs-12'>
+            <table class='table table-hover' style='color: #0071ce; font-weight: 500;'>
+              <thead>
+                <tr>
+                  <th>
+                    Specialist
+                  </th>
+                  <th>
+                    Location
+                  </th>
+                  <th>
+                    Phone
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    Louise McCormack
+                  </td>
+                  <td>
+                    QEII Jubliee Hospital
+                  </td>
+                  <td>
+                    32752111
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Phillip Vecchio
+                  </td>
+                  <td>
+                    Princess Alexandra Hospital
+                  </td>
+                  <td>
+                    32762111
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Matthew Brown
+                  </td>
+                  <td>
+                    Princess Alexandra Hospital
+                  </td>
+                  <td>
+                    32762111
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

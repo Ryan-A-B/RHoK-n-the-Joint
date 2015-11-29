@@ -11,15 +11,18 @@ get '/' do
 end
 
 post '/responses' do
+
+ # rheumatoid_json = String.new(' {"url":"http://www.arthritis.org.au/arthritis/rheumatoid-arthritis/", "name": "Rheumatoid Arthritis"},')
+
   response = Response.new(JSON.parse request.body.read)
 
   if SymptomChecker.new(response).find_symptoms
     '{
         "type": "Inflammatory",
         "strains": [
-          {"url":"https://www.google.com", "name": "Rheumatoid Arthritis"},
+	        {"url":"http://www.arthritis.org.au/arthritis/rheumatoid-arthritis/", "name": "Rheumatoid Arthritis"},
           {"url":"https://www.google.com", "name": "Psoriatic Arthritis"},
-          {"url":"https://www.google.com", "name": "Fibromyalgia"}
+          {"url":"http://www.arthritis.org.au/arthritis/fibromyalgia/", "name": "Fibromyalgia"}
         ]
     }'
   else
