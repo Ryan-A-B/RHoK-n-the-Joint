@@ -10,9 +10,23 @@ post '/responses' do
   response = Response.new(JSON.parse request.body.read)
 
   if SymptomChecker.new(response).find_symptoms
-    '{ "message":"inflamatory" }'
+    '{
+        type: "Inflammatory",
+        strains: [
+          {url:"https://www.google.com", name: "Rheumatoid Arthritis"},
+          {url:"https://www.google.com", name: "Psoriatic Arthritis"},
+          {url:"https://www.google.com", name: "Fibromyalgia"}
+        ]
+    }'
   else
-    '{ "message":"mechanical" }'
+    '{
+        type: "Mechanical",
+        strains: [
+          {url:"https://www.google.com", name: "Rheumatoid Arthritis"},
+          {url:"https://www.google.com", name: "Psoriatic Arthritis"},
+          {url:"https://www.google.com", name: "Fibromyalgia"}
+        ]
+    }'
   end
 
 end
