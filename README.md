@@ -34,7 +34,7 @@ This request will return an inflammatory diagnosis.
       "id":1,
       "description":"Age",
       "answers":[
-        {"id":null, "value":60}
+        {"id":null, "value":35}
       ]
     },
     {
@@ -67,12 +67,13 @@ This request will return an inflammatory diagnosis.
     },
     {
       "id":6,
-      "description":"Articulations of head, neck and cervical and thoracic spine",
+      "description":"Articulations of the upper limb",
       "answers":[
-        {"id":1, "value":"Articulations of the mandible"},
-        {"id":2, "value":"Articulations of the vertebral column with the cranium"},
-        {"id":3, "value":"Articulation of the atlas with the epistropheous or axis"},
-        {"id":4, "value":"Costovertebral articulations"}
+        {"id":1, "value":"Elbow joint articulations"},
+        {"id":2, "value":"Radio ulnar articulations"},
+        {"id":3, "value":"Carpometacarpal articulations"},
+        {"id":4, "value":"Metacarpophalangeal articulations"},
+        {"id":5, "value":"Articulations of the digits"}
       ]
     }
   ]
@@ -80,6 +81,60 @@ This request will return an inflammatory diagnosis.
 ```
 
 ### Example Questionnaire Answers #2
+
+This request will return an inflammatory diagnosis.
+
+```
+{
+  "questions":[
+    {
+      "id":1,
+      "description":"Age",
+      "answers":[
+        {"id":null, "value":55}
+      ]
+    },
+    {
+      "id":2,
+      "description":"Sex",
+      "answers":[
+        {"id":1, "value":"male"}
+      ]
+    },
+    {
+      "id":3,
+      "description":"Onset of symptoms",
+      "answers":[
+        {"id":1, "value":"> 3 months"}
+      ]
+    },
+    {
+      "id":4,
+      "description":"Regularity of symptoms",
+      "answers":[
+        {"id":1, "value":"persistant"}
+      ]
+    },
+    {
+      "id":5,
+      "description":"Morning pain or stiffness",
+      "answers":[
+        {"id":3, "value":"< 30 mins"}
+      ]
+    },
+    {
+      "id":6,
+      "description":"Articulations of the upper limb",
+      "answers":[
+        {"id":5, "value":"Articulations of the digits"}
+      ]
+    }
+  ]
+}
+```
+
+
+### Example Questionnaire Answers #3
 
 This request will return an mechanical diagnosis.
 
@@ -123,7 +178,7 @@ This request will return an mechanical diagnosis.
     },
     {
       "id":6,
-      "description":"Articulations of head, neck and cervical and thoracic spine",
+      "description":"Articulations of the upper limb",
       "answers":[]
     }
   ]
