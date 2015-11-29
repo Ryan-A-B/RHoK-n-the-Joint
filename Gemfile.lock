@@ -10,6 +10,8 @@ GEM
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
+    rack-test (0.6.3)
+      rack (>= 1.0)
     shotgun (0.9.1)
       rack (>= 1.0)
     sinatra (1.4.6)
@@ -26,6 +28,10 @@ PLATFORMS
 
 DEPENDENCIES
   pry
+  rack-test
   shotgun
   sinatra
   sinatra-partial
+
+BUNDLED WITH
+   1.10.6
