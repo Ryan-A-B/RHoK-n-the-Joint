@@ -6,7 +6,7 @@ require 'pry'
 require_relative 'lib/response'
 require_relative 'lib/symptom_checker'
 
-post '/answers' do
+post '/responses' do
   response = Response.new(JSON.parse request.body.read)
 
   if SymptomChecker.new(response).find_symptoms
