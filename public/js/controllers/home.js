@@ -10,6 +10,7 @@ angular.module('aqdaApp')
     };
 
     $scope.buildSubmission = function(){
+      console.log($scope.answers);
       var submission = [
         {
           "id":1,
@@ -42,9 +43,9 @@ angular.module('aqdaApp')
           "answers":[]
         };
         if (question.type == "yesNo"){
-          if ( question.noSelected ){
+          if ( answer.noSelected ){
             //do nothing
-          }else if ( question.yesSelected ){
+          }else if ( answer.yesSelected ){
             //check if theres a sub question - if there is, use that answer
             if ( question.subQuestion != null ){
               submissionAnswer.answers = answer.detailedAnswers;
@@ -59,7 +60,7 @@ angular.module('aqdaApp')
         }
         submission.push(submissionAnswer);
       }
-      console.log(submission);
+      console.log(JSON.stringify({"questions":submission}));
     }
 
     $scope.completeSurvey = function(){
