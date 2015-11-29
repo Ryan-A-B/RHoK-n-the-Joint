@@ -32,7 +32,7 @@ html {
 
 .aqdaBody {
     font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
-    background-color: #015CA7;
+    background-color: #0071ce;
     height: 100%;
 }
 
@@ -119,4 +119,8 @@ ul.navbar-nav a {
 
 .question-form-control-unselected{
   background-color: transparent;
+}
+
+.wrapper {
+  min-height: calc(100vh - 60px);
 }

@@ -231,7 +231,7 @@ angular.module('aqdaApp')
       },
       {
         "id":3,
-        "description":"Onset of Symptoms",
+        "description":"Onset of symptoms",
         "type":"select",
         "options":[
           {"id":1, "value":"< 1 Month"},
@@ -242,7 +242,7 @@ angular.module('aqdaApp')
       },
       {
         "id":4,
-        "description":"Regularity of Symptoms",
+        "description":"Regularity of symptoms",
         "type":"select",
         "options":[
           {"id":1, "value":"Persistent"},
