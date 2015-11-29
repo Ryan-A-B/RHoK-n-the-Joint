@@ -7,7 +7,11 @@ require_relative 'lib/response'
 require_relative 'lib/symptom_checker'
 
 get '/' do
-  redirect '/index.html'
+  redirect '/login'
+end
+
+post '/login' do
+  redirect '/survey.html'
 end
 
 post '/responses' do
