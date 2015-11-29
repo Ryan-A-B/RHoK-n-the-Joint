@@ -8,6 +8,12 @@
 3. Install gems (ruby packages) using bundler `bundle install`
 4. Start server with `shotgun app.rb`. Your server will now be listening on `http://localhost:9393`
 
+## Running under Docker
+1. Install Docker! Guides for [http://docs.docker.com/windows/started/](Windows), [http://docs.docker.com/mac/started/](Mac) and [http://docs.docker.com/linux/started/](Linux)
+2. Open a Docker command line, change to the project directory and run `docker build ./`
+3. Once the image is built, run `docker run --rm -p 9393:9393 <container id>`
+4. The application is now accessible on port 9393 on your Docker host.
+
 ## Sinatra
 
 This project uses [Sinatra](http://www.sinatrarb.com), a micro framework for Ruby.
@@ -186,4 +192,3 @@ This request will return an mechanical diagnosis.
   ]
 }
 ```
-
