@@ -1,6 +1,6 @@
 # RHoK-n-the-Joint
 
-(https://rhok-n-the-joint.herokuapp.com)[https://rhok-n-the-joint.herokuapp.com]
+[https://rhok-n-the-joint.herokuapp.com](https://rhok-n-the-joint.herokuapp.com)
 
 ## Setup
 1. Install Ruby
