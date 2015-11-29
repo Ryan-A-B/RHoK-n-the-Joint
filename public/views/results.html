@@ -13,7 +13,7 @@
             </tbody>
           </table>
           <div style="padding-top: 50px;">
-            <button type="button" class="btn btn-default btn-lg question-form-control question-form-control-unselected"style="width: auto; font-size: 15px;">Patient Info</button>
+            <button type="button" class="btn btn-default btn-lg question-form-control question-form-control-unselected"style="width: auto; font-size: 15px;" data-toggle='modal' data-target='#info'>Patient Info</button>
             <button type="button" class="btn btn-default btn-lg question-form-control question-form-control-unselected"style="width: auto; font-size: 15px;" data-toggle='modal' data-target='#referals'>Generate Referral</button>
           </div>
         </div>
@@ -22,6 +22,35 @@
     </div>
   </div>
 </div>
+<div class="modal fade" tabindex="-1" id='info' role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" style='color: #0071ce;'>Infomation</h4>
+      </div>
+      <div class="modal-body">
+        <div class='row'>
+          <div class='col-xs-12'>
+            <ul style='color: #0071ce;'>
+              <li>
+                <a href='/docs/Ankylosing-Spondylitis.pdf' style='color: #0071ce;'>Ankylosing Spondylitis</a>
+              </li>
+              <li>
+                <a href='/docs/Osteoarthritis.pdf' style='color: #0071ce;'>Osteoarthritis</a>
+              </li>
+              <li>
+                <a href='/docs/Rheumatoid-arthritis.pdf' style='color: #0071ce;'>Rheumatoid Arthritis</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 <div class="modal modal-lg fade" tabindex="-1" id='referals' role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -84,6 +113,9 @@
                 </tr>
               </tbody>
             </table>
+            <a href="/docs/referral.template.docx" style='color: #0071ce;'>
+              Referal
+            </a>
           </div>
         </div>
       </div>
