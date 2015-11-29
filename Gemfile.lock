@@ -29,6 +29,3 @@ DEPENDENCIES
   shotgun
   sinatra
   sinatra-partial
-
-BUNDLED WITH
-   1.10.6

@@ -24,6 +24,14 @@ get '/' do
   'Hello world!'
 end
 
+get '/login' do
+  erb :login
+end
+
+post '/login' do
+  redirect '/'
+end
+
 # POST http://localhost:9393/echo
 # returns the body of the post request
 post '/echo' do

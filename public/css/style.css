@@ -1,86 +1,60 @@
-@font-face {
-    font-family: museo-sans;
-    src: url(/fonts/MuseoSans_300.otf);
-}
-
 body {
-    background-color: #333;
-
-    font-family: museo-sans;
+  color: white;
+  font-weight: 700;
+  background-color: #0071ce;
 }
 
 a {
-    color: #f80;
+  color: #fff;
+  font-weight: 500;
+  text-decoration: underline;
 }
 
 a:hover {
-    color: #d60;
+  color: #ddf;
 }
 
+.form-control,
 .btn {
-    padding: 6px 80px;
+  padding: 10px;
 }
 
-.btn.btn-block {
-    padding: 6px 12px;
-}
+.form-control {
+  height: auto;
 
-.btn-default.active {
-    color: #fff;
+  border: #6babe5 3px solid;
+  background-color: transparent;
 
-    background-color: #555;
-
-    border-color: #444;
-}
-
-.btn-default.active:hover {
-    background-color: #777;
+  text-align: center;
+  color: white;
 }
 
 .btn-primary.active {
-    color: #fff;
-
-    background-color: #f80;
-
-    border-color: #e70;
+  border: #6babe5 3px solid;
+  background-color: #0071ce;
+  font-weight: 700;
 }
 
 .btn-primary.active:hover {
-    background-color: #d60;
+  border: #6babe5 3px solid;
+  background-color: #1081de;
 }
 
-.navbar {
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: #666;
-
-    border-radius: 0px;
-
-    background-color: rgba(48, 48, 48, 0.8);
+.wrapper {
+  min-height: calc(100vh - 60px);
 }
 
-.navbar-nav > li > a {
-    margin-bottom: 3px;
-
-    color: #fff;
-
-    border-bottom-color: transparent;
-    border-bottom-width: 2px;
-    border-bottom-style: solid;
+.disclaimer {
+  margin-top: 18vh;
 }
 
-.navbar-nav > li > a:focus,
-.navbar-nav > li > a:hover {
-    background: none;
+.footer {
+  display: flex;
 
-    border-bottom-color: #f80;
-}
+  height: 60px;
 
-.navbar-toggle {
-    background-color: #f80;
-    border-color: #e70;
-}
+  align-items: center;
+  justify-content: space-around;
 
-.navbar-toggle .icon-bar {
-    background-color: #fff;
+  background-color: #015ca7;
 }
