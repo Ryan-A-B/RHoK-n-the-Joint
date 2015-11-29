@@ -9,6 +9,8 @@ angular.module('aqdaApp')
 
     };
 
+    var baseResponses = Restangular.all('responses');
+
     $scope.buildSubmission = function(){
       console.log($scope.answers);
       var submission = [
@@ -60,7 +62,21 @@ angular.module('aqdaApp')
         }
         submission.push(submissionAnswer);
       }
-      console.log(JSON.stringify({"questions":submission}));
+      var fullSubmission = {"questions":submission};
+      console.log(JSON.stringify(fullSubmission));
+      baseResponses.post(fullSubmission).then(function(results){
+        $scope.results = results;
+      }, function(err){
+        alert("Error encountered - Faking it");
+        $scope.results = {
+          type: 'Mechanical',
+          strains: [
+            {url:"https://www.google.com", name: "Rheumatoid Arthritis"},
+            {url:"https://www.google.com", name: "Psoriatic Arthritis"},
+            {url:"https://www.google.com", name: "Fibromyalgia"}
+          ]
+        };
+      });
     }
 
     $scope.completeSurvey = function(){
@@ -69,14 +85,6 @@ angular.module('aqdaApp')
         var q = $scope.questions[i];
         q.active = false;
       }
-      $scope.results = {
-        type: 'Mechanical',
-        strains: [
-          {url:"https://www.google.com", name: "Rheumatoid Arthritis"},
-          {url:"https://www.google.com", name: "Psoriatic Arthritis"},
-          {url:"https://www.google.com", name: "Fibromyalgia"}
-        ]
-      };
     }
 
     $scope.yesNoSelected = function(question, result){
